@@ -1,0 +1,73 @@
+unit Hosxp_Create;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, DM_hosxp,
+  Data.DB, Vcl.Grids, Vcl.DBGrids ;
+
+type
+  Thosxp_add = class(TForm)
+    Hosxp_create: TPanel;
+    firstname: TLabel;
+    gender: TLabel;
+    age: TLabel;
+    surname: TLabel;
+    phonenumber: TLabel;
+    address: TLabel;
+    notice: TLabel;
+    surname_edit: TEdit;
+    gender_edit: TEdit;
+    age_Edit: TEdit;
+    phone_edit: TEdit;
+    address_edit: TEdit;
+    notice_edit: TEdit;
+    create: TButton;
+    DBGrid1: TDBGrid;
+    firstname_edit: TEdit;
+    id_edit: TEdit;
+    id: TLabel;
+    procedure createClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  hosxp_add: Thosxp_add;
+
+implementation
+
+{$R *.dfm}
+
+procedure Thosxp_add.createClick(Sender: TObject);
+var sfirstname : string;
+
+begin
+  with dm_database do ;
+  begin
+    sfirstname := firstname_edit.Text;
+    if dm_database.dm_table.Locate('firstname',sfirstname,[]) then
+    begin
+      showmessage('ID already exists');
+      exit;
+    end;
+
+    dm_database.dm_table.Insert;
+    dm_database.dm_table['firstname'] :=sfirstname;
+    dm_database.dm_table['lastname'] :=surname_edit.Text;
+    dm_database.dm_table['gender'] :=gender_edit.Text;
+    dm_database.dm_table['age'] :=age_edit.Text;
+    dm_database.dm_table['phone number'] := phone_edit.Text;
+    dm_database.dm_table['notice'] := notice_edit.Text;
+    dm_database.dm_table.Post;
+
+
+
+
+  end;
+end;
+
+end.

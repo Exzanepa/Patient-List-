@@ -1,0 +1,24 @@
+unit HosxpLogin;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  THosxpLogins = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  HosxpLogins: THosxpLogins;
+
+implementation
+
+{$R *.dfm}
+
+end.

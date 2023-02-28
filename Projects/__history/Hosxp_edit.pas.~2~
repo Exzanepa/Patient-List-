@@ -1,0 +1,27 @@
+unit Hosxp_edit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, DM_hosxp;
+
+type
+  THosxp_editmain = class(TForm)
+    Panel_edit: TPanel;
+    grid_edit: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Hosxp_editmain: THosxp_editmain;
+
+implementation
+
+{$R *.dfm}
+
+end.

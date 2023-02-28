@@ -1,0 +1,17 @@
+program Project1;
+
+uses
+  Forms,
+  HosxpMain in 'HosxpMain.pas' {HosxpMains},
+  HosxpLogin in 'HosxpLogin.pas' {HosxpLogins},
+  Unit1 in 'Unit1.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(THosxpMains, HosxpMains);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

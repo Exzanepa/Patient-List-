@@ -1,0 +1,205 @@
+object hosxp_add: Thosxp_add
+  Left = 0
+  Top = 0
+  Caption = 'create list'
+  ClientHeight = 453
+  ClientWidth = 735
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Hosxp_create: TPanel
+    Left = 0
+    Top = -8
+    Width = 857
+    Height = 549
+    Caption = 'Hosxp_Create'
+    TabOrder = 0
+    object firstname: TLabel
+      Left = 43
+      Top = 48
+      Width = 49
+      Height = 13
+      Caption = 'firstname:'
+    end
+    object surname: TLabel
+      Left = 43
+      Top = 75
+      Width = 49
+      Height = 13
+      Caption = 'surname:'
+    end
+    object gender: TLabel
+      Left = 43
+      Top = 102
+      Width = 38
+      Height = 13
+      Caption = 'gender:'
+    end
+    object age: TLabel
+      Left = 43
+      Top = 129
+      Width = 22
+      Height = 13
+      Caption = 'age:'
+    end
+    object phonenumber: TLabel
+      Left = 43
+      Top = 156
+      Width = 73
+      Height = 13
+      Caption = 'phone number:'
+    end
+    object address: TLabel
+      Left = 43
+      Top = 183
+      Width = 42
+      Height = 13
+      Caption = 'address:'
+    end
+    object notice: TLabel
+      Left = 43
+      Top = 210
+      Width = 33
+      Height = 13
+      Caption = 'notice:'
+    end
+    object id: TLabel
+      Left = 43
+      Top = 21
+      Width = 15
+      Height = 13
+      Caption = 'ID:'
+    end
+    object surname_edit: TEdit
+      Left = 121
+      Top = 72
+      Width = 121
+      Height = 21
+      TabOrder = 0
+    end
+    object gender_edit: TEdit
+      Left = 121
+      Top = 99
+      Width = 121
+      Height = 21
+      TabOrder = 1
+    end
+    object age_Edit: TEdit
+      Left = 121
+      Top = 126
+      Width = 121
+      Height = 21
+      TabOrder = 2
+    end
+    object phone_edit: TEdit
+      Left = 121
+      Top = 153
+      Width = 121
+      Height = 21
+      TabOrder = 3
+    end
+    object address_edit: TEdit
+      Left = 121
+      Top = 180
+      Width = 121
+      Height = 21
+      TabOrder = 4
+    end
+    object notice_edit: TEdit
+      Left = 121
+      Top = 207
+      Width = 121
+      Height = 122
+      TabOrder = 5
+    end
+    object create: TButton
+      Left = 135
+      Top = 351
+      Width = 75
+      Height = 25
+      Caption = 'create'
+      TabOrder = 6
+      OnClick = createClick
+    end
+    object DBGrid1: TDBGrid
+      Left = 280
+      Top = 18
+      Width = 449
+      Height = 367
+      DataSource = dm_database.dm_dsc
+      TabOrder = 7
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'ID'
+          Width = 20
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'firstname'
+          Width = 60
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'lastname'
+          Width = 60
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'gender'
+          Width = 60
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'age'
+          Width = 30
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'notice'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'phone number'
+          Width = 90
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'address'
+          Visible = True
+        end>
+    end
+    object firstname_edit: TEdit
+      Left = 121
+      Top = 45
+      Width = 121
+      Height = 21
+      TabOrder = 8
+    end
+    object id_edit: TEdit
+      Left = 121
+      Top = 18
+      Width = 121
+      Height = 21
+      TabOrder = 9
+    end
+  end
+end

@@ -1,0 +1,94 @@
+unit HosxpMain;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, HosxpLogin, ExtCtrls, StdCtrls, Grids, DBGrids,HosxpCreate, DB, ADODB,
+  Data.FMTBcd, Data.SqlExpr, Data.DBXMySql, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Mask, Vcl.DBCtrls ;
+
+type
+  THosxpMains = class(TForm)
+    btn_create: TButton;
+    btn_update: TButton;
+    btn_logout: TButton;
+    btn_delete: TButton;
+    Panel1: TPanel;
+    Label1: TLabel;
+    btn_search: TButton;
+    Button1: TButton;
+    DBGrid1: TDBGrid;
+    DBEdit1: TDBEdit;
+    DBNavigator1: TDBNavigator;
+    Label2: TLabel;
+    tInput: TEdit;
+    procedure FormShow(Sender: TObject);
+    procedure btn_createClick(Sender: TObject);
+    procedure btn_searchClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  HosxpMains: THosxpMains;
+  iNew : integer;
+
+implementation
+
+{$R *.dfm}
+
+procedure THosxpMains.btn_createClick(Sender: TObject);
+begin
+  HosxpCreate1.Show;
+end;
+
+procedure THosxpMains.btn_searchClick(Sender: TObject);
+var sInput: string;
+
+    bFound: boolean;
+begin
+sInput := tInput.Text ;
+bFound := False;
+
+
+with HosxpMains do
+begin
+  Hosxp_table_ADO.First;
+  while (NOT Hosxp_table_ADO.Eof) AND (bFound = False) do
+    begin
+      if Hosxp_table_ADO['ID'] = sInput then
+        begin
+          showmessage('Name :'+' '+Hosxp_table_ADO['firstname']+' '+Hosxp_table_ADO['lastname']+'   '+'Disease :'+' '+Hosxp_table_ADO['notice']);
+          bFound := true;
+        end;
+
+      Hosxp_table_ADO.Next;
+    end;
+
+if bFound = False then
+  showmessage('Not found');
+end
+end;
+
+procedure THosxpMains.FormShow(Sender: TObject);
+begin
+  HosxpLogins := THosxplogins.Create(self);
+  HosxpLogins.ShowModal;
+  iNew := HosxpLogins.NewString;
+  if iNew = 0 then
+  begin
+    Application.Terminate;
+  end;
+
+
+
+end;
+
+end.

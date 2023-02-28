@@ -1,0 +1,130 @@
+object hosxp_add: Thosxp_add
+  Left = 0
+  Top = 0
+  Caption = 'create list'
+  ClientHeight = 283
+  ClientWidth = 343
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = -8
+    Width = 662
+    Height = 517
+    TabOrder = 0
+    object firstname: TLabel
+      Left = 42
+      Top = 21
+      Width = 49
+      Height = 13
+      Caption = 'firstname:'
+    end
+    object lastname: TLabel
+      Left = 42
+      Top = 48
+      Width = 47
+      Height = 13
+      Caption = 'lastname:'
+    end
+    object gender: TLabel
+      Left = 42
+      Top = 75
+      Width = 38
+      Height = 13
+      Caption = 'gender:'
+    end
+    object age: TLabel
+      Left = 42
+      Top = 102
+      Width = 22
+      Height = 13
+      Caption = 'age:'
+    end
+    object phonenumber: TLabel
+      Left = 42
+      Top = 150
+      Width = 73
+      Height = 13
+      Caption = 'phone number:'
+    end
+    object address: TLabel
+      Left = 42
+      Top = 177
+      Width = 42
+      Height = 13
+      Caption = 'address:'
+    end
+    object notice: TLabel
+      Left = 42
+      Top = 204
+      Width = 33
+      Height = 13
+      Caption = 'notice:'
+    end
+    object Edit1: TEdit
+      Left = 121
+      Top = 18
+      Width = 121
+      Height = 21
+      TabOrder = 0
+    end
+    object Edit2: TEdit
+      Left = 121
+      Top = 45
+      Width = 121
+      Height = 21
+      TabOrder = 1
+    end
+    object Edit3: TEdit
+      Left = 121
+      Top = 72
+      Width = 121
+      Height = 21
+      TabOrder = 2
+    end
+    object Edit4: TEdit
+      Left = 121
+      Top = 99
+      Width = 121
+      Height = 21
+      TabOrder = 3
+    end
+    object Edit5: TEdit
+      Left = 121
+      Top = 147
+      Width = 121
+      Height = 21
+      TabOrder = 4
+    end
+    object Edit6: TEdit
+      Left = 121
+      Top = 174
+      Width = 121
+      Height = 21
+      TabOrder = 5
+    end
+    object Edit7: TEdit
+      Left = 121
+      Top = 201
+      Width = 121
+      Height = 21
+      TabOrder = 6
+    end
+    object add: TButton
+      Left = 144
+      Top = 247
+      Width = 75
+      Height = 25
+      Caption = 'create'
+      TabOrder = 7
+      OnClick = addClick
+    end
+  end
+end

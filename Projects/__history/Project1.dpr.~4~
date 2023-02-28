@@ -1,0 +1,23 @@
+program Project1;
+
+uses
+  Forms,
+  HosxpMain in 'HosxpMain.pas' {HosxpMains},
+  HosxpLogin in 'HosxpLogin.pas' {HosxpLogins},
+  HosxpAddition in 'HosxpAddition.pas' {Form2},
+  HosxpReg in 'HosxpReg.pas' {Form1},
+  HosxpUpdate in 'HosxpUpdate.pas' {Form3},
+  HosxpCal in 'HosxpCal.pas' {Form4};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(THosxpMains, HosxpMains);
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm4, Form4);
+  Application.Run;
+end.

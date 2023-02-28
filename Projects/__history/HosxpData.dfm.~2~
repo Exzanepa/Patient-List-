@@ -1,0 +1,20 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 335
+  Width = 494
+  object SQLConnection1: TSQLConnection
+    ConnectionName = 'MSSQLConnection'
+    DriverName = 'MySQL'
+    GetDriverFunc = 'getSQLDriverMYSQL'
+    LibraryName = 'dbxmys.dll'
+    LoginPrompt = False
+    Params.Strings = (
+      'HostName=localhost'
+      'User_Name=root'
+      'Password=admin'
+      'Database=test')
+    VendorLib = 'libmysql.dll'
+    Left = 120
+    Top = 128
+  end
+end

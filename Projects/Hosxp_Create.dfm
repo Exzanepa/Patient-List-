@@ -1,0 +1,272 @@
+object hosxp_add: Thosxp_add
+  Left = 0
+  Top = 0
+  Caption = 'create list'
+  ClientHeight = 453
+  ClientWidth = 735
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Hosxp_create: TPanel
+    Left = 0
+    Top = -8
+    Width = 857
+    Height = 549
+    Caption = 'Hosxp_Create'
+    TabOrder = 0
+    object firstname: TLabel
+      Left = 43
+      Top = 48
+      Width = 49
+      Height = 13
+      Caption = 'firstname:'
+    end
+    object surname: TLabel
+      Left = 43
+      Top = 75
+      Width = 45
+      Height = 13
+      Caption = 'surname:'
+    end
+    object gender: TLabel
+      Left = 43
+      Top = 102
+      Width = 38
+      Height = 13
+      Caption = 'gender:'
+    end
+    object age: TLabel
+      Left = 43
+      Top = 129
+      Width = 22
+      Height = 13
+      Caption = 'age:'
+    end
+    object phonenumber: TLabel
+      Left = 42
+      Top = 290
+      Width = 73
+      Height = 13
+      Caption = 'phone number:'
+    end
+    object address: TLabel
+      Left = 42
+      Top = 318
+      Width = 42
+      Height = 13
+      Caption = 'address:'
+    end
+    object Label1: TLabel
+      Left = 42
+      Top = 237
+      Width = 31
+      Height = 13
+      Caption = 'stage:'
+    end
+    object Label2: TLabel
+      Left = 43
+      Top = 159
+      Width = 33
+      Height = 13
+      Caption = 'notice:'
+    end
+    object Label3: TLabel
+      Left = 42
+      Top = 210
+      Width = 54
+      Height = 13
+      Caption = 'catagories:'
+    end
+    object Label4: TLabel
+      Left = 41
+      Top = 185
+      Width = 24
+      Height = 13
+      Caption = 'CD4:'
+    end
+    object Label5: TLabel
+      Left = 42
+      Top = 264
+      Width = 21
+      Height = 13
+      Caption = 'LET:'
+    end
+    object surname_create: TEdit
+      Left = 121
+      Top = 72
+      Width = 121
+      Height = 21
+      TabOrder = 0
+    end
+    object gender_create: TEdit
+      Left = 121
+      Top = 99
+      Width = 121
+      Height = 21
+      TabOrder = 1
+    end
+    object age_create: TEdit
+      Left = 121
+      Top = 126
+      Width = 121
+      Height = 21
+      TabOrder = 2
+    end
+    object phone_create: TEdit
+      Left = 121
+      Top = 288
+      Width = 121
+      Height = 21
+      TabOrder = 3
+    end
+    object address_create: TEdit
+      Left = 121
+      Top = 315
+      Width = 121
+      Height = 21
+      TabOrder = 4
+    end
+    object notice_create: TEdit
+      Left = 121
+      Top = 153
+      Width = 121
+      Height = 21
+      TabOrder = 5
+    end
+    object create: TButton
+      Left = 135
+      Top = 407
+      Width = 75
+      Height = 25
+      Caption = 'create'
+      TabOrder = 6
+      OnClick = createClick
+    end
+    object DBGrid1: TDBGrid
+      Left = 280
+      Top = 18
+      Width = 449
+      Height = 367
+      DataSource = dm_database.dm_dsc
+      TabOrder = 7
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'ID'
+          Width = 30
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'firstname'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'lastname'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'gender'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'age'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'notice'
+          Width = 200
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CD4'
+          Width = 40
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'catagories'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'stage'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'LET'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'phone number'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'address'
+          Visible = True
+        end>
+    end
+    object firstname_create: TEdit
+      Left = 121
+      Top = 45
+      Width = 121
+      Height = 21
+      TabOrder = 8
+    end
+    object cd4_create: TEdit
+      Left = 121
+      Top = 180
+      Width = 121
+      Height = 21
+      TabOrder = 9
+    end
+    object let_create: TEdit
+      Left = 121
+      Top = 261
+      Width = 121
+      Height = 21
+      TabOrder = 10
+    end
+    object catagories_create: TEdit
+      Left = 121
+      Top = 207
+      Width = 121
+      Height = 21
+      TabOrder = 11
+    end
+    object stage_create: TEdit
+      Left = 121
+      Top = 234
+      Width = 121
+      Height = 21
+      TabOrder = 12
+    end
+  end
+end

@@ -1,0 +1,24 @@
+unit HosxpCreate;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  THosxpCreate1 = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  HosxpCreate1: THosxpCreate1;
+
+implementation
+
+{$R *.dfm}
+
+end.

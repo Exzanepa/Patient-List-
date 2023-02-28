@@ -1,0 +1,30 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 274
+  Width = 354
+  object dm_connect: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\66800\OneD' +
+      'rive\'#3648#3629#3585#3626#3634#3619'\RAD Studio\Projects\Database3.mdb;Mode=ReadWrite;Per' +
+      'sist Security Info=False'
+    LoginPrompt = False
+    Mode = cmReadWrite
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 48
+    Top = 128
+  end
+  object dm_table: TADOTable
+    Active = True
+    Connection = dm_connect
+    CursorType = ctStatic
+    TableName = 'Table1'
+    Left = 104
+    Top = 120
+  end
+  object dm_dsc: TDataSource
+    DataSet = dm_table
+    Left = 168
+    Top = 120
+  end
+end

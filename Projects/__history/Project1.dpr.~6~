@@ -1,0 +1,21 @@
+program Project1;
+
+uses
+  Forms,
+  HosxpMain in 'HosxpMain.pas' {HosxpMains},
+  HosxpLogin in 'HosxpLogin.pas' {HosxpLogins},
+  HosxpCreate in 'HosxpCreate.pas' {HosxpCreate1},
+  HosxpCal in 'HosxpCal.pas' {Form1},
+  HosxpData in 'HosxpData.pas' {DataModule1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(THosxpMains, HosxpMains);
+  Application.CreateForm(THosxpCreate1, HosxpCreate1);
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.Run;
+end.

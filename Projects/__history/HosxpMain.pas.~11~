@@ -1,0 +1,56 @@
+unit HosxpMain;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, HosxpLogin, ExtCtrls, StdCtrls, Grids, DBGrids,HosxpCreate, DB, ADODB ;
+
+type
+  THosxpMains = class(TForm)
+    DBGrid1: TDBGrid;
+    btn_create: TButton;
+    btn_update: TButton;
+    btn_logout: TButton;
+    btn_delete: TButton;
+    Panel1: TPanel;
+    edt_search_keyword: TEdit;
+    Label1: TLabel;
+    btn_search: TButton;
+    Button1: TButton;
+    procedure FormShow(Sender: TObject);
+    procedure btn_createClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  HosxpMains: THosxpMains;
+  iNew : integer;
+
+implementation
+
+{$R *.dfm}
+
+procedure THosxpMains.btn_createClick(Sender: TObject);
+begin
+  HosxpCreate1.Show;
+end;
+
+procedure THosxpMains.FormShow(Sender: TObject);
+begin
+  HosxpLogins := THosxplogins.Create(self);
+  HosxpLogins.ShowModal;
+  iNew := HosxpLogins.NewString;
+  if iNew = 0 then
+  begin
+    Application.Terminate;
+  end;
+
+
+
+end;
+
+end.
